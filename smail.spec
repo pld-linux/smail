@@ -13,16 +13,14 @@ Patch0:		%name-EDITME-config-file-PLD.patch
 Obsoletes:	sendmail
 BuildRequires:	glibc-devel 
 BuildRequires:	libident-devel
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr
 
 %description
   
-
 %description -l pl
   
-
 %prep
 %setup -q
 
