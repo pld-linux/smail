@@ -7,8 +7,8 @@ License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fe1333b6541636f0b26e6ff9e5f664d3
+BuildRequires:	bison
 BuildRequires:	libident-devel
-BuildRequires:	yacc
 Provides:	smtpdaemon
 Obsoletes:	smtpdaemon
 Obsoletes:	exim
@@ -44,16 +44,22 @@ do czytania i wysy³ania poczty.
 %setup -q
 
 %build
-#./configure --prefix=%{_prefix}
-%{__make} depend
+%{__make} depend \
+	YACC="bison -y" \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
+
 %{__make} \
-	CC="%{__cc}"
+	YACC="bison -y" \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install
 
-cd $RPM_BUILD_ROOT%{_bindir};ln -s smail sendmail
+ln -s smail $RPM_BUILD_ROOT%{_bindir}/sendmail
 
 %clean
 rm -rf $RPM_BUILD_ROOT
