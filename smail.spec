@@ -1,5 +1,5 @@
 Summary:	Smail MTA
-Summary(pl):	Smail - alternatywa dla sendmail-a
+Summary(pl):	Smail - alternatywa dla sendmaila
 Name:		smail
 Version:	3.2.0.109
 Release:	1
@@ -11,10 +11,10 @@ Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-EDITME-config-file-PLD.patch
 #Patch1:	%{name}-compile.fix
 #Patch2:	%{name}-src.fix
-Provides:	smtpdaemon
 BuildRequires:	glibc-devel
 BuildRequires:	libident-devel
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Provides:	smtpdaemon
+Obsoletes:	smtpdaemon
 Obsoletes:	exim
 Obsoletes:	masqmail
 Obsoletes:	omta
@@ -23,8 +23,8 @@ Obsoletes:	qmail
 Obsoletes:	sendmail
 Obsoletes:	sendmail-cf
 Obsoletes:	sendmail-doc
-Obsoletes:	smtpdaemon
 Obsoletes:	zmailer
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Smail-3 is a Mail Transport Agent, i.e. a program used for sending and
