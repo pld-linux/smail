@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	54c7e6ef884778cd595d88bfe4bf38d5
 Patch0:		%{name}-EDITME-config-file-PLD.patch
 #Patch1:	%{name}-compile.fix
 #Patch2:	%{name}-src.fix
