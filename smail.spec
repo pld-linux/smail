@@ -35,7 +35,7 @@ local machine. It is not intended to be a user interface for reading
 and submitting mail.
 
 %description -l pl
-Smail-3 to MTA, czyli program ¿ywany do wysy³ania i odbierania poczty.
+Smail-3 to MTA, czyli program u¿ywany do wysy³ania i odbierania poczty.
 
 Jego zadanie to przyjmowanie wiadomo¶ci lokalnie lub od zdalnych
 maszyn oraz dostarczanie ich do w³a¶ciwych celów - maszyn zdalnych lub
