@@ -1,17 +1,14 @@
 Summary:	Smail MTA
 Summary(pl):	Smail - alternatywa dla sendmaila
 Name:		smail
-Version:	3.2.0.109
+Version:	3.2.0.112
 Release:	0.1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	54c7e6ef884778cd595d88bfe4bf38d5
-Patch0:		%{name}-EDITME-config-file-PLD.patch
-#Patch1:	%{name}-compile.fix
-#Patch2:	%{name}-src.fix
-BuildRequires:	glibc-devel
+# Source0-md5:	fe1333b6541636f0b26e6ff9e5f664d3
 BuildRequires:	libident-devel
+BuildRequires:	yacc
 Provides:	smtpdaemon
 Obsoletes:	smtpdaemon
 Obsoletes:	exim
@@ -46,20 +43,18 @@ do czytania i wysy³ania poczty.
 %prep
 %setup -q
 
-%patch0 -p0
-#%patch1 -p0
-#%patch2 -p0
-
 %build
 #./configure --prefix=%{_prefix}
 %{__make} depend
-%{__make}
+%{__make} \
+	CC="%{__cc}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install
 
-(cd $RPM_BUILD_ROOT%{_bindir};ln -s smail sendmail)
+cd $RPM_BUILD_ROOT%{_bindir};ln -s smail sendmail
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
