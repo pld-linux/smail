@@ -7,10 +7,12 @@ License:	GPL
 Group:		Mail/MTA
 Group(pl):	Poczta/MTA
 Source:		ftp://ftp.uu.net/networking/mail/%{name}/%name-%version.tar.gz
-#Patch0:		%name-configure-PLD.patch
+Patch0:		%name-EDITME-config-file-PLD.patch
 #Patch1:		%name-compile.fix
 #Patch2:		%name-src.fix
 Obsoletes:	sendmail
+BuildRequires:	glibc-devel 
+BuildRequires:	libident-devel
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %define	_prefix	/usr
@@ -24,17 +26,18 @@ Buildroot:	/tmp/%{name}-%{version}-root
 %prep
 %setup -q
 
-#%patch0 -p0
+%patch0 -p0
 #%patch1 -p0
 #%patch2 -p0
 
 %build
 #./configure --prefix=%{_prefix}
+make depend
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make prefix=$RPM_BUILD_ROOT%{_prefix} install
+make install
 
 (cd $RPM_BUILD_ROOT%{_bindir};ln -s smail sendmail)
 %clean
