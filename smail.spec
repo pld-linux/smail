@@ -1,4 +1,4 @@
-Summary:	Smail MTA 
+Summary:	Smail MTA
 Summary(pl):	Smail - alternatywa dla sendmail-a
 Name:		smail
 Version:	3.2.0.109
@@ -7,18 +7,21 @@ License:	GPL
 Group:		Networking/Daemons
 Group(de):	Netzwerkwesen/Server
 Group(pl):	Sieciowe/Serwery
-Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%name-%version.tar.gz
-Patch0:		%name-EDITME-config-file-PLD.patch
-#Patch1:	%name-compile.fix
-#Patch2:	%name-src.fix
+Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
+Patch0:		%{name}-EDITME-config-file-PLD.patch
+#Patch1:	%{name}-compile.fix
+#Patch2:	%{name}-src.fix
 Provides:	smtpdaemon
-BuildRequires:	glibc-devel 
+BuildRequires:	glibc-devel
 BuildRequires:	libident-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	exim
+Obsoletes:	masqmail
+Obsoletes:	omta
 Obsoletes:	postfix
+Obsoletes:	qmail
 Obsoletes:	sendmail
-Obsoletes:	sendmail-cf                                                                                   
+Obsoletes:	sendmail-cf
 Obsoletes:	sendmail-doc
 Obsoletes:	smtpdaemon
 Obsoletes:	zmailer
@@ -32,6 +35,14 @@ or from remote hosts, and deliver those messages to the appropriate
 destinations, be they to remote hosts or to files or programs on the
 local machine. It is not intended to be a user interface for reading
 and submitting mail.
+
+%description -l pl
+Smail-3 to MTA, czyli program ¿ywany do wysy³ania i odbierania poczty.
+
+Jego zadanie to przyjmowanie wiadomo¶ci lokalnie lub od zdalnych
+maszyn oraz dostarczanie ich do w³a¶ciwych celów - maszyn zdalnych lub
+plików czy programów lokalnie. Smail nie jest interfejsem u¿ytkownika
+do czytania i wysy³ania poczty.
 
 %prep
 %setup -q
