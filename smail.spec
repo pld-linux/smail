@@ -5,8 +5,6 @@ Version:	3.2.0.109
 Release:	1
 License:	GPL
 Group:		Networking/Daemons
-Group(de):	Netzwerkwesen/Server
-Group(pl):	Sieciowe/Serwery
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
 Patch0:		%{name}-EDITME-config-file-PLD.patch
 #Patch1:	%{name}-compile.fix
