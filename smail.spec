@@ -2,7 +2,7 @@ Summary:	Smail MTA
 Summary(pl):	Smail - alternatywa dla sendmaila
 Name:		smail
 Version:	3.2.0.109
-Release:	1
+Release:	0.1
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
