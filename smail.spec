@@ -4,8 +4,8 @@ Name:		smail
 Version:	3.2.0.109
 Release:	1
 License:	GPL
-Group:		Mail/MTA
-Group(pl):	Poczta/MTA
+Group:		Networking/Daemons
+Group(pl):	Sieciowe/Serwery
 Source:		ftp://ftp.uu.net/networking/mail/%{name}/%name-%version.tar.gz
 Patch0:		%name-EDITME-config-file-PLD.patch
 #Patch1:		%name-compile.fix
