@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.uu.net/networking/mail/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	fe1333b6541636f0b26e6ff9e5f664d3
+URL:		http://www.weird.com/~woods/projects/smail.html
 BuildRequires:	bison
 BuildRequires:	libident-devel
 Provides:	smtpdaemon
