@@ -11,6 +11,7 @@ BuildRequires:	bison
 BuildRequires:	libident-devel
 Provides:	smtpdaemon
 Obsoletes:	smtpdaemon
+Obsoletes:	courier
 Obsoletes:	exim
 Obsoletes:	masqmail
 Obsoletes:	omta
