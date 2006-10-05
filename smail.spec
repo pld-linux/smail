@@ -1,3 +1,5 @@
+# TODO
+# - make it build and package files ;)
 Summary:	Smail MTA
 Summary(pl):	Smail - alternatywa dla sendmaila
 Name:		smail
@@ -11,7 +13,6 @@ URL:		http://www.weird.com/~woods/projects/smail.html
 BuildRequires:	bison
 BuildRequires:	libident-devel
 Provides:	smtpdaemon
-Obsoletes:	smtpdaemon
 Obsoletes:	courier
 Obsoletes:	exim
 Obsoletes:	masqmail
@@ -22,6 +23,7 @@ Obsoletes:	qmail
 Obsoletes:	sendmail
 Obsoletes:	sendmail-cf
 Obsoletes:	sendmail-doc
+Obsoletes:	smtpdaemon
 Obsoletes:	zmailer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +38,8 @@ local machine. It is not intended to be a user interface for reading
 and submitting mail.
 
 %description -l pl
-Smail-3 to MTA, czyli program u¿ywany do wysy³ania i odbierania poczty.
+Smail-3 to MTA, czyli program u¿ywany do wysy³ania i odbierania
+poczty.
 
 Jego zadanie to przyjmowanie wiadomo¶ci lokalnie lub od zdalnych
 maszyn oraz dostarczanie ich do w³a¶ciwych celów - maszyn zdalnych lub
@@ -45,6 +48,7 @@ do czytania i wysy³ania poczty.
 
 %prep
 %setup -q
+ln -s Make.local-trad conf/Make.local
 
 %build
 %{__make} depend \
@@ -70,4 +74,3 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc
-#%attr(,,)
