@@ -1,7 +1,7 @@
 # TODO
 # - make it build and package files ;)
 Summary:	Smail MTA
-Summary(pl.UTF-8):   Smail - alternatywa dla sendmaila
+Summary(pl.UTF-8):	Smail - alternatywa dla sendmaila
 Name:		smail
 Version:	3.2.0.121
 Release:	0.1
