@@ -1,7 +1,7 @@
 # TODO
 # - make it build and package files ;)
 Summary:	Smail MTA
-Summary(pl):	Smail - alternatywa dla sendmaila
+Summary(pl.UTF-8):   Smail - alternatywa dla sendmaila
 Name:		smail
 Version:	3.2.0.121
 Release:	0.1
@@ -37,14 +37,14 @@ destinations, be they to remote hosts or to files or programs on the
 local machine. It is not intended to be a user interface for reading
 and submitting mail.
 
-%description -l pl
-Smail-3 to MTA, czyli program u¿ywany do wysy³ania i odbierania
+%description -l pl.UTF-8
+Smail-3 to MTA, czyli program uÅ¼ywany do wysyÅ‚ania i odbierania
 poczty.
 
-Jego zadanie to przyjmowanie wiadomo¶ci lokalnie lub od zdalnych
-maszyn oraz dostarczanie ich do w³a¶ciwych celów - maszyn zdalnych lub
-plików czy programów lokalnie. Smail nie jest interfejsem u¿ytkownika
-do czytania i wysy³ania poczty.
+Jego zadanie to przyjmowanie wiadomoÅ›ci lokalnie lub od zdalnych
+maszyn oraz dostarczanie ich do wÅ‚aÅ›ciwych celÃ³w - maszyn zdalnych lub
+plikÃ³w czy programÃ³w lokalnie. Smail nie jest interfejsem uÅ¼ytkownika
+do czytania i wysyÅ‚ania poczty.
 
 %prep
 %setup -q
