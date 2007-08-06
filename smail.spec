@@ -4,7 +4,7 @@ Summary:	Smail MTA
 Summary(pl.UTF-8):	Smail - alternatywa dla sendmaila
 Name:		smail
 Version:	3.2.0.121
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.planix.com/pub/Smail/%{name}-%{version}.tar.gz
@@ -13,18 +13,7 @@ URL:		http://www.weird.com/~woods/projects/smail.html
 BuildRequires:	bison
 BuildRequires:	libident-devel
 Provides:	smtpdaemon
-Obsoletes:	courier
-Obsoletes:	exim
-Obsoletes:	masqmail
-Obsoletes:	nullmailer
-Obsoletes:	omta
-Obsoletes:	postfix
-Obsoletes:	qmail
-Obsoletes:	sendmail
-Obsoletes:	sendmail-cf
-Obsoletes:	sendmail-doc
 Obsoletes:	smtpdaemon
-Obsoletes:	zmailer
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
